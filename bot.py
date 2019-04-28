@@ -7,7 +7,7 @@ import random
 
 def weather():
     header = {
-        'X-Yandex-API-Key': '50847a41-2bed-4674-a1c6-96f5f9f333c2',
+        'X-Yandex-API-Key': '',#Ваш ключи для яндекс.Погоды
     }
     res = requests.get('https://api.weather.yandex.ru/v1/forecast?lat=55.75396&lon=37.620393&extra=true', headers = header).json()
     now = res['fact']
@@ -55,7 +55,7 @@ def help():
 
 def main():
     #Далее идёт настройка самого бота
-    token = "92cbfb70aa304a39ba49a4359f5c53487368e80c3d17f729c4748a1f2109f69341c0a319b9ba573af03d5"
+    token = ""#Ключ для VKApi
     vk = vk_api.VkApi(token=token)
     longpoll = VkLongPoll(vk)
     #Настройка клавиатуры
